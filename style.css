@@ -1,0 +1,289 @@
+/* Global Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Body Background Gradient */
+body {
+  font-family: 'Poppins', sans-serif;
+  background: linear-gradient(to bottom, #231942, #E0B1CB);
+  color: #fff;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Header */
+header {
+  background-color: #231942;
+  padding: 15px 30px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: sticky;
+  top: 0;
+}
+
+header .logo {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.5rem;
+  color: #E0B1CB;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: #fff;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+nav ul li a:hover {
+  color: #E0B1CB;
+}
+
+/* Hero Section */
+.hero {
+  text-align: center;
+  padding: 100px 20px;
+  background: linear-gradient(to bottom, #231942, #E0B1CB);
+  color: #fff;
+}
+
+.hero h1 {
+  font-family: 'Playfair Display', serif;
+  font-size: 2.5rem;
+  margin-bottom: 10px;
+  color: #E0B1CB;
+}
+
+.hero h2 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+}
+
+.hero p {
+  font-size: 1.2rem;
+  margin-bottom: 30px;
+}
+
+.hero .btn {
+  background-color: #E0B1CB;
+  color: #231942;
+  padding: 12px 25px;
+  border-radius: 25px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: all 0.3s ease;
+}
+
+.hero .btn:hover {
+  background-color: #231942;
+  color: #fff;
+}
+
+/* Rise Effect */
+.rise {
+  opacity: 0;
+  transform: translateY(30px);
+  animation: riseUp 1s ease forwards;
+}
+
+@keyframes riseUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.btn {
+  background-color: #E0B1CB;
+  color: #231942;
+  padding: 12px 25px;
+  border-radius: 25px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: all 0.3s ease;
+}
+
+.btn:hover {
+  background-color: #231942;
+  color: #fff;
+}
+
+/* Footer */
+footer {
+  background-color: #231942;
+  text-align: center;
+  padding: 15px;
+  font-size: 0.9rem;
+}
+
+
+
+
+
+/* Menu Section */
+.menu {
+  text-align: center;
+  padding: 60px 20px;
+}
+
+.menu h1 {
+  font-family: 'Playfair Display', serif;
+  font-size: 2.5rem;
+  margin-bottom: 40px;
+  color: #231942;
+}
+
+.menu-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+}
+
+.menu-item {
+  background-color: #E0B1CB;
+  color: #231942;
+  padding: 20px;
+  border-radius: 15px;
+  box-shadow: 0 4px 8px rgba(35, 25, 66, 0.2);
+  transition: transform 0.3s ease;
+}
+
+.menu-item:hover {
+  transform: translateY(-5px);
+}
+
+.menu-item h3 {
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+}
+
+.menu-item p {
+  font-size: 1rem;
+  margin-bottom: 15px;
+}
+
+.menu-item .btn {
+  background-color: #231942;
+  color: #fff;
+  padding: 10px 20px;
+  border-radius: 20px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: all 0.3s ease;
+}
+
+.menu-item .btn:hover {
+  background-color: #fff;
+  color: #231942;
+}
+
+
+.menu-item img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 10px;
+  margin-bottom: 15px;
+}
+
+
+
+
+
+
+/* Disclaimer Box */
+.disclaimer {
+  background-color: #231942;   /* Indigo background */
+  color: #E0B1CB;              /* Pink text */
+  padding: 20px;
+  margin: 40px auto;
+  max-width: 600px;
+  text-align: center;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(35, 25, 66, 0.3);
+  opacity: 0;                  /* hidden initially for rise effect */
+  transform: translateY(30px); /* start lower */
+}
+
+/* Rise Effect (applied globally) */
+.rise {
+  animation: riseUp 1s ease forwards;
+}
+
+@keyframes riseUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+
+
+
+/* Page Fade-In Effect */
+body {
+  animation: fadeIn 0.8s ease-in;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+
+
+
+/* Contact Section Centered */
+.contact {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: calc(100vh - 100px); /* full height minus header/footer */
+  text-align: center;
+  padding: 40px 20px;
+}
+
+
+
+/* Contact Card Styling */
+.contact-card {
+  background-color: #231942;
+  color: #E0B1CB;
+  padding: 30px;
+  border-radius: 15px;
+  max-width: 600px;
+  margin: 0 auto;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+  font-size: 1rem;
+  line-height: 1.8;
+}
+
+.contact-card a {
+  color: #E0B1CB;
+  text-decoration: underline;
+  font-weight: 500;
+}
+
+.contact-card a:hover {
+  color: #fff;
+}
+
+
+
